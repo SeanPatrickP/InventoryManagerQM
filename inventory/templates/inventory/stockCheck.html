@@ -1,0 +1,30 @@
+{% extends "inventory/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    <div class="flex-grid">
+    {% for item in items %}
+        <div class="item-container bg-dark text-center text-white" id={{item.productId}}>
+            <div class="my-3 py-3">
+                <h2 class="display-5">{{item.description}}</h2>
+                <form>
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input type="price" class="form-control" id="priceInput" aria-describedby="emailHelp" placeholder="Enter Price" value={{item.price}}>
+                        <label>Quantity</label>
+                        <input type="quantity" class="form-control" id="quantityInput" aria-describedby="emailHelp" placeholder="Enter Quantity" value={{item.quantity}}>
+                        <label>Product Id</label>
+                        <input type="productId" class="form-control" id="productIdInput" aria-describedby="emailHelp" value={{item.productId}} readonly>
+                      </div>
+                      <button type="button" class="update-button btn btn-primary">Update</button>
+                      <button type="button" class="delete-button btn btn-danger">Delete</button>
+                </form>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,66 @@
+.gray-header {
+    background-color: lightgray;
+}
+
+.welcome-div {
+    height: 100%;
+}
+
+body {
+    height: 100vh;
+}
+
+.welcome-art-block {
+    width: 80%; 
+    height: 100%; 
+    border-radius: 21px 21px 0 0;
+}
+
+.main-div{
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+.row-content {
+    flex: 1 1 auto;
+}
+
+.item-container {
+    margin-bottom: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    min-width: 250px;
+    max-width: 250px;
+    flex: 1;
+}
+
+.form-control {
+    margin: auto;
+    display: block;
+    width: auto !important;
+}
+
+.flex-grid {
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.add-item-label {
+    color: white;
+    font-size: xxx-large;
+}
+
+.add-item {
+    width: 50% !important; 
+    font-size: xxx-large !important;
+}
+
+.add-button {
+    font-size: xxx-large !important;
+}
+
+.sell-selected-button {
+    margin-bottom: 10px;
+}

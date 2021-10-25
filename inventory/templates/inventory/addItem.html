@@ -1,0 +1,30 @@
+{% extends "inventory/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="row-content bg-light text-center overflow-hidden">
+    <div class="my-3 p-3">
+    <h2 class="display-5">Add an item</h2>
+    <p class="lead">Fill out the below fields</p>
+    </div>
+    <div class="welcome-art-block bg-dark shadow-sm mx-auto">
+        <form id="addItemForm">
+            {% csrf_token %}
+            <div class="form-group">
+                <label class="add-item-label">Description</label>
+                <input type="price" class="add-item form-control" id="descriptionInput" aria-describedby="emailHelp" placeholder="Enter Description">
+                <label class="add-item-label">Price</label>
+                <input type="price" class="add-item form-control" id="priceInput" aria-describedby="emailHelp" placeholder="Enter Price">
+                <label class="add-item-label">Quantity</label>
+                <input type="quantity" class="add-item form-control" id="quantityInput" aria-describedby="emailHelp" placeholder="Enter Quantity">
+                <label class="add-item-label">Product Id</label>
+                <input type="productId" class="add-item form-control" id="productIdInput" aria-describedby="emailHelp" value={{productId}} readonly>
+              </div>
+              <button type="button" class="add-button btn btn-primary">Add</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
